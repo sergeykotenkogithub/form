@@ -1,0 +1,17 @@
+.logo a {
+    position: relative;
+}
+
+.header {
+    padding-top: 58px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.navigation {
+    position: relative;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}

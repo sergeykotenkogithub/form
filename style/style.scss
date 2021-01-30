@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import "header";
+@import "form";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1440px;
+}
+
+.background {
+  position: absolute;
+  width: 1440px;
+  height: 609px;
+  background: linear-gradient(
+      359.45deg,
+      #4a99d3 -24.57%,
+      rgba(74, 153, 211, 0) 76.31%
+    ),
+    #ffffff;
+  opacity: 0.2;
+  transform: rotate(180deg);
+}
+
+.indent {
+  margin-left: 245px;
+  margin-right: 245px;
+}
