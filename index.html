@@ -28,7 +28,7 @@
 
         <div class="form_name">Leave us a message</div>
 
-        <form action="#">
+        <form id="myForm" action="#">
           <div class="form_wrapper">
             <div class="form_input">
               <div class="name">
@@ -42,13 +42,16 @@
             <div class="form_upload">
               <p class="form_file">Upload your files</p>
               <div class="form_drag">
-                <img src="./img/folder.svg" alt="folder" />
-                <p>Drag your files here.</p>
-                <p>Maximum size: 2mb</p>
+                <div class="form_divDrag">
+                  <img src="./img/folder.svg" alt="folder" />
+                  <p>Drag your files here.</p>
+                  <p>Maximum size: 2mb</p>
+                </div>
+                <input type="file" name="myFile" class="form_dragInput"/>
               </div>
             </div>
 
-            <button>Send</button>
+            <button type="submit" value="Send Me!">Send</button>
           </div>
         </form>
       </div>
