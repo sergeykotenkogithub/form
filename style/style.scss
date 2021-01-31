@@ -1,6 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 @import "header";
 @import "form";
+@import "footer";
+
+@font-face {
+	font-family: 'Objektiv';
+	src: url('../fonts/ObjektivMk1-Regular.eot');
+	src: local('☺'), url('../fonts/ObjektivMk1-Regular.woff') format('woff'), url('../fonts/ObjektivMk1-Regular.ttf') format('truetype'), url('../fonts/ObjektivMk1-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Objektiv';
+	src: url('../fonts/ObjektivMk1-Medium.eot');
+	src: local('☺'), url('../fonts/ObjektivMk1-Medium.woff') format('woff'), url('../fonts/ObjektivMk1-Medium.ttf') format('truetype'), url('../fonts/ObjektivMk1-Medium.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
 
 * {
   margin: 0;
