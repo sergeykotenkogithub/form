@@ -150,4 +150,7 @@
   font-size: 14px;
   text-align: center; }
 
+._error {
+  box-shadow: 0 0 15px red; }
+
 /*# sourceMappingURL=form.css.map */

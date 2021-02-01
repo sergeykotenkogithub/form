@@ -9,9 +9,32 @@ document.querySelectorAll(".form_dragInput").forEach((inputElement) => {
 
   inputElement.addEventListener("change", e => {
       if (inputElement.files.length) {
-          updateThumbnail(dropZoneElement, inputElement.files[0])
+        uploadFile(inputElement.files[0])       
       }
   })
+
+  // Проверка на то чтоб не превышал более 2мб и также можно чтоб была проверка картинки
+
+  function uploadFile(file) {
+
+    // Если сделать проверку чтоб картинка была
+
+    // if(!['image/jpeg', 'image/png', "image/gif"].includes(file.type)) {
+    //     alert('Прикрепите изображение')
+    //     formImage.value = ""
+    //     return
+    // } 
+
+    if(file.size > 2 * 1024 * 1024) {
+        alert("Файл дожен быть менее 2 мб")
+        inputElement.value = ''
+        return
+    }
+
+    else {
+      updateThumbnail(dropZoneElement, inputElement.files[0])
+    }
+  }
 
   dropZoneElement.addEventListener("dragover", (e) => {
     e.preventDefault();
@@ -61,58 +84,5 @@ function updateThumbnail(dropZoneElement, file) {
 
 }
 
-// 
-
-// let myForm = document.getElementById("myForm");
-
-// myForm.addEventListener('submit', (e) => {
-//     console.log("Привет")
-// })
-
-// form_drag
-
-// document.querySelectorALL(".drop-zone__input").forEach(inputElement => {
-//     const dropZoneElement = inputElement.closest(".form_drag")
-
-
-// onSubmit() {
-//     let allValid = true;
-//     // пройти все элементы
-//     for (const item of this.formItems) {
-//       // проверить каждый (взять тип и значение из полей с значениями)
-//       if (!isValid(item.type, this.values[item.type])) {
-//         // если ошибка - установить сообщение
-//         this.errors[item.type] = errorMessages[item.type];
-//         allValid = false;
-//       }
-//     }
-
-//     // если все ок - отправить запрос
-//     if (allValid) {
-//       fetch("https://google.com", {
-//         method: "post",
-//         body: JSON.stringify(this.values),
-//       });
-//     }
-//   },
-
-
-// //////////////////////////////////////////////////////////////////////////////////////
-
-
-var object = {};
-var formData = new FormData(document.forms.person);
-
-formData.forEach(function(value, key){
-    object[key] = value;
-});
-var json = JSON.stringify(object);
-
-var xhr = new XMLHttpRequest();
-xhr.open("POST", 'https://beryl-boggy-ceiling.glitch.me/email', true)
-xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-
-// Отсылаем объект в формате JSON и с Content-Type application/json
-xhr.send(json);
 
 
