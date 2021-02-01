@@ -57,9 +57,9 @@ document.addEventListener("DOMContentLoaded", function() {
         // const url = 'https://example.com';
         const url = 'https://beryl-boggy-ceiling.glitch.me/email' ;
         let obj = {}
-        var formData = new FormData(document.forms.person)
+        let formData = new FormData(document.forms.person)
         const fileUpload = document.getElementById('fileUpload')
-        formData.append('image', fileUpload.files[0]);
+        // formData.append('image', fileUpload.files[0]); Если картинка
     
         formData.forEach(function (value, key) {
             obj[key] = value
