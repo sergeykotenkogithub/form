@@ -121,7 +121,7 @@
   width: 258.77px;
   height: 155.63px;
   background: #f9f9fb;
-  border: 4px dashed #d2d7e5;
+  border: 3px dashed #d2d7e5;
   box-sizing: border-box;
   border-radius: 16px;
   cursor: pointer;
@@ -151,7 +151,7 @@
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #cccccc;
+  background-color: #4a99d3;
   background-size: cover;
   position: relative; }
 
